@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/garyburd/redigo/redis"
 	"github.com/ksarch-saas/cc/cli/context"
 	"github.com/ksarch-saas/cc/controller/command"
 	"github.com/ksarch-saas/cc/frontend/api"
@@ -28,24 +29,26 @@ type AppInfo struct {
 	Exceptions int
 	//分片是否对称
 	ReplicaEqual bool
+	//分片最大大小
+	ReplicaMax string
+	//分片最小大小
+	ReplicaMin string
+	//分片平均大小
+	ReplicaAvg string
 }
 
 var wsClients []*Client
 
 var appInfoMap map[string]*AppInfo
 
-func Init() {
-	wsClients = make([]*Client, 2)
-}
-
 func Run(meta *conf.DashboardConf) {
-	tickC := time.NewTicker(time.Second * 30).C
+	tickC := time.NewTicker(time.Second * 10).C
 
 	count := 0
 	var children []string
 	zkaddr := meta.Zk
+	meta_server := meta.Meta_server
 	inner := func() {
-		appInfoMap = make(map[string]*AppInfo, 100)
 		zconn, _, err := m.DialZk(zkaddr)
 		if err != nil {
 			fmt.Println("zk: dial zookeeper failed")
@@ -67,7 +70,7 @@ func Run(meta *conf.DashboardConf) {
 		select {
 		case <-tickC:
 			if count == 0 {
-				//frequency 3min
+				//frequency 1min
 				//update apps
 				inner()
 			}
@@ -78,15 +81,35 @@ func Run(meta *conf.DashboardConf) {
 				continue
 			}
 
-			//frequency 30s
+			conn, err := redis.DialTimeout("tcp", meta_server, 10*time.Second, 10*time.Second, 10*time.Second)
+			if err != nil {
+				fmt.Println(err)
+				continue
+			}
+			//frequency 10s
+			aim := make(map[string]*AppInfo, 500)
 			for _, app := range children {
 				rsss, err := FetchReplicaSets(app, zkaddr)
 				if err != nil {
 					fmt.Println(err)
 				}
+				cc := context.GetControllerConfig()
+				m := map[string]string{
+					"ip":        cc.Ip,
+					"http_port": fmt.Sprintf("%d", cc.HttpPort),
+					"ws_port":   fmt.Sprintf("%d", cc.WsPort),
+				}
+				key := fmt.Sprintf("meta_%s", app)
+				_, err = conn.Do("HMSET", redis.Args{}.Add(key).AddFlat(m)...)
+				if err != nil {
+					fmt.Println(err)
+					return
+				}
+
 				appinfo := AppCheck(rsss)
-				appInfoMap[app] = appinfo
+				aim[app] = appinfo
 			}
+			appInfoMap = aim
 			//send the appinfomap to websocket
 			for _, c := range wsClients {
 				c.C <- appInfoMap
@@ -130,12 +153,32 @@ func AppCheck(rsss command.FetchReplicaSetsResult) *AppInfo {
 	var replicas int      //副本数
 	var notRunning int    //异常实例数
 	var replicaEqual bool //各副本节点数是否相同
+	var replicaMax int64
+	var replicaMin int64
+	var replicaTotal int64
 
 	first := true
 	totalNodes = 0
 	replicaEqual = true
+	replicaMin = 1024 * 1024 * 1024 * 1024 //1TB
+	replicaMax = -1
+	replicaTotal = 0
 
 	for _, rs := range rss {
+		//get used memory from master
+		if rs.Master != nil && rs.Master.IsArbiter() {
+			continue
+		}
+		if rs.Master != nil {
+			usedMemory := rs.Master.UsedMemory
+			if replicaMax < usedMemory {
+				replicaMax = usedMemory
+			}
+			if replicaMin > usedMemory {
+				replicaMin = usedMemory
+			}
+			replicaTotal += usedMemory
+		}
 		totalNodes += len(rs.AllNodes())
 		if first {
 			first = false
@@ -146,10 +189,14 @@ func AppCheck(rsss command.FetchReplicaSetsResult) *AppInfo {
 			//check replicaset if has same number nodes
 			if replicas != len(rs.AllNodes()) {
 				replicaEqual = false
-				break
 			}
 		}
 	}
+	replicaAvg := 0.0
+	if len(rss) > 0 {
+		replicaAvg = float64(replicaTotal / int64(len(rss)))
+	}
+
 	notRunning = 0
 	for _, ns := range nss {
 		if ns != "RUNNING" {
@@ -162,6 +209,9 @@ func AppCheck(rsss command.FetchReplicaSetsResult) *AppInfo {
 		Replicas:     replicas,
 		Exceptions:   notRunning,
 		ReplicaEqual: replicaEqual,
+		ReplicaMax:   fmt.Sprintf("%0.2f", float64(replicaMax)/1024.0/1024.0/1024.0),
+		ReplicaMin:   fmt.Sprintf("%0.2f", float64(replicaMin)/1024.0/1024.0/1024.0),
+		ReplicaAvg:   fmt.Sprintf("%0.2f", replicaAvg/1024.0/1024.0/1024.0),
 	}
 	return &appinfo
 }

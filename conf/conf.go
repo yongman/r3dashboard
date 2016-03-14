@@ -6,8 +6,9 @@ import (
 )
 
 type DashboardConf struct {
-	Listen string `yaml:"listen,omitempty"`
-	Zk     string `yaml:"zk,omitempty"`
+	Listen      string `yaml:"listen,omitempty"`
+	Zk          string `yaml:"zk,omitempty"`
+	Meta_server string `yaml:"meta_server,omitempty"`
 }
 
 func LoadConf(filename string) (*DashboardConf, error) {
