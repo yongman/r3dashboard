@@ -1,0 +1,120 @@
+{
+	"ImportPath": "github.com/ksarch-saas/r3dashboard",
+	"GoVersion": "go1.5.2",
+	"Packages": [
+		"./"
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/garyburd/redigo/internal",
+			"Rev": "764a32c188f6ce0bc2565349f0125b3ad4021ea9"
+		},
+		{
+			"ImportPath": "github.com/garyburd/redigo/redis",
+			"Rev": "764a32c188f6ce0bc2565349f0125b3ad4021ea9"
+		},
+		{
+			"ImportPath": "github.com/gin-gonic/gin",
+			"Comment": "v1.0rc1-148-g52fcc5d",
+			"Rev": "52fcc5dbf6e94df33ad313858fb94b713e9d1b4a"
+		},
+		{
+			"ImportPath": "github.com/golang/glog",
+			"Rev": "d1c4472bf2efd3826f2b5bdcc02d8416798d678c"
+		},
+		{
+			"ImportPath": "github.com/ksarch-saas/cc/cli/context",
+			"Comment": "0.1-43-g38b1424",
+			"Rev": "38b1424730b9e68f755a781fa30cb01842b30abd"
+		},
+		{
+			"ImportPath": "github.com/ksarch-saas/cc/controller",
+			"Comment": "0.1-43-g38b1424",
+			"Rev": "38b1424730b9e68f755a781fa30cb01842b30abd"
+		},
+		{
+			"ImportPath": "github.com/ksarch-saas/cc/frontend/api",
+			"Comment": "0.1-43-g38b1424",
+			"Rev": "38b1424730b9e68f755a781fa30cb01842b30abd"
+		},
+		{
+			"ImportPath": "github.com/ksarch-saas/cc/frontend/auth",
+			"Comment": "0.1-43-g38b1424",
+			"Rev": "38b1424730b9e68f755a781fa30cb01842b30abd"
+		},
+		{
+			"ImportPath": "github.com/ksarch-saas/cc/fsm",
+			"Comment": "0.1-43-g38b1424",
+			"Rev": "38b1424730b9e68f755a781fa30cb01842b30abd"
+		},
+		{
+			"ImportPath": "github.com/ksarch-saas/cc/log",
+			"Comment": "0.1-43-g38b1424",
+			"Rev": "38b1424730b9e68f755a781fa30cb01842b30abd"
+		},
+		{
+			"ImportPath": "github.com/ksarch-saas/cc/meta",
+			"Comment": "0.1-43-g38b1424",
+			"Rev": "38b1424730b9e68f755a781fa30cb01842b30abd"
+		},
+		{
+			"ImportPath": "github.com/ksarch-saas/cc/migrate",
+			"Comment": "0.1-43-g38b1424",
+			"Rev": "38b1424730b9e68f755a781fa30cb01842b30abd"
+		},
+		{
+			"ImportPath": "github.com/ksarch-saas/cc/redis",
+			"Comment": "0.1-43-g38b1424",
+			"Rev": "38b1424730b9e68f755a781fa30cb01842b30abd"
+		},
+		{
+			"ImportPath": "github.com/ksarch-saas/cc/state",
+			"Comment": "0.1-43-g38b1424",
+			"Rev": "38b1424730b9e68f755a781fa30cb01842b30abd"
+		},
+		{
+			"ImportPath": "github.com/ksarch-saas/cc/streams",
+			"Comment": "0.1-43-g38b1424",
+			"Rev": "38b1424730b9e68f755a781fa30cb01842b30abd"
+		},
+		{
+			"ImportPath": "github.com/ksarch-saas/cc/topo",
+			"Comment": "0.1-43-g38b1424",
+			"Rev": "38b1424730b9e68f755a781fa30cb01842b30abd"
+		},
+		{
+			"ImportPath": "github.com/ksarch-saas/cc/utils",
+			"Comment": "0.1-43-g38b1424",
+			"Rev": "38b1424730b9e68f755a781fa30cb01842b30abd"
+		},
+		{
+			"ImportPath": "github.com/manucorporat/sse",
+			"Rev": "fe6ea2c8e398672518ef204bf0fbd9af858d0e15"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-colorable",
+			"Rev": "043ae16291351db8465272edf465c9f388161627"
+		},
+		{
+			"ImportPath": "github.com/samuel/go-zookeeper/zk",
+			"Rev": "d0e0d8e11f318e000a8cc434616d69e329edc374"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "19b594f1abaff92ed8ffffb98ca9831a643401d5"
+		},
+		{
+			"ImportPath": "golang.org/x/net/websocket",
+			"Rev": "6c248060f952e492a9f0f25d49a727fab9251693"
+		},
+		{
+			"ImportPath": "gopkg.in/bluesuncorp/validator.v5",
+			"Comment": "v5.12",
+			"Rev": "d5acf1dac43705f8bfbb71d878e290e2bed3950b"
+		},
+		{
+			"ImportPath": "gopkg.in/yaml.v1",
+			"Rev": "9f9df34309c04878acc86042b16630b0f696e1de"
+		}
+	]
+}

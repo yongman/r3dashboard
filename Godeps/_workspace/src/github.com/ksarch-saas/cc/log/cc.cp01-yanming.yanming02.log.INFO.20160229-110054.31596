@@ -1,0 +1,79 @@
+Log file created at: 2016/02/29 11:00:54
+Running on machine: cp01-yanming
+Binary: Built with gc go1.5.2 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0229 11:00:54.436029 31596 main.go:40] 10.92.149.57:6600
+I0229 11:00:54.436425 31596 main.go:40] 10.92.149.57:6500
+I0229 11:00:54.452369 31596 leader.go:30] Total controllers 1
+I0229 11:00:54.452397 31596 leader.go:142] meta: clusterleader:cc_bj_0000000021, regionleader:cc_bj_0000000021
+I0229 11:00:55.459273 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:00:56.457205 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:00:57.457422 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:00:58.457956 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:00:59.457123 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:00.457540 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:01.457383 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:02.457351 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:03.457500 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:04.457345 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:05.458969 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:06.457586 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:07.457751 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:08.457557 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:09.457832 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:10.457523 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:11.457892 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:12.457372 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:13.457289 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:14.457975 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:15.457692 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:16.457832 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:17.457630 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:18.457639 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:19.457725 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:20.458058 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:21.457520 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:22.457611 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:23.457754 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:24.457717 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:25.457494 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:26.457363 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:27.457289 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:28.458010 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:29.457586 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:30.457413 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:31.457584 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:32.457490 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:33.457216 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:34.457404 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:35.458543 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:36.458948 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:37.458203 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:38.457734 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:39.457318 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:40.457463 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:41.457833 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:42.457403 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:43.457495 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:44.457438 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:45.457370 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:46.457444 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:47.457504 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:48.457141 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:49.457521 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:50.457613 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:51.457624 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:52.457708 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:53.457732 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:54.454377 31596 leader.go:30] Total controllers 1
+I0229 11:01:54.454414 31596 meta.go:232] Check leaders, err: <nil>
+I0229 11:01:54.457496 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:55.457983 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:56.457916 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:57.457549 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:58.457543 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:01:59.459075 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:02:00.457579 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:02:01.457508 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:02:02.457561 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
+I0229 11:02:03.457325 31596 report.go:87] build cluster topo failed, ERR Wrong CLUSTER subcommand or number of arguments
